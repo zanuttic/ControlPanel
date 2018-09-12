@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using ControlPanel.Models;
+using ControlPanel.Data;
 
 namespace ControlPanel
 {
@@ -22,10 +25,13 @@ namespace ControlPanel
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<ControlPanelContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ControlPanelContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ControlPanelContext context)
         {
             if (env.IsDevelopment())
             {
@@ -45,6 +51,7 @@ namespace ControlPanel
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            dbInitializer.Initialize(context);
         }
     }
 }
