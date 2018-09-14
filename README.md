@@ -9,6 +9,6 @@ https://docs.microsoft.com/en-us/ef/core/modeling/
 
 
 se genero un usuario para el UserAppPooll
-Nombre: UserAppPooll
+Nombre: UserAppPool
 Pass: Nbsf1234
 
