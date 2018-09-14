@@ -6,3 +6,9 @@ PM> install-package microsoft.EntityFrameworkCore.SqlServer -Version 2.0.3
 
 Documentacion sobre tipos de anotaciones SqlServer
 https://docs.microsoft.com/en-us/ef/core/modeling/
+
+
+se genero un usuario para el UserAppPooll
+Nombre: UserAppPooll
+Pass: Nbsf1234
+

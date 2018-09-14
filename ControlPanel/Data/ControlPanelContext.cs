@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace ControlPanel.Models
+namespace ControlPanel.Data
 {
     public class ControlPanelContext : DbContext
     {
@@ -9,6 +9,6 @@ namespace ControlPanel.Models
         {
         }
 
-        public DbSet<ControlPanel.Models.Juego> Juego { get; set; }
+        public DbSet<Models.Juego> Juego { get; set; }
     }
 }

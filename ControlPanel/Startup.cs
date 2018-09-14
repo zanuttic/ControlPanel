@@ -28,6 +28,10 @@ namespace ControlPanel
 
             services.AddDbContext<ControlPanelContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ControlPanelContext")));
+
+            services.AddDbContext<MemoTestContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MemoTestContext")));
+                    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
