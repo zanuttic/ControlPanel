@@ -29,8 +29,8 @@ namespace ControlPanel
             services.AddDbContext<ControlPanelContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("ControlPanelContext")));
 
-            services.AddDbContext<MemoTestContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MemoTestContext")));
+            //services.AddDbContext<MemoTestContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("MemoTestContext")));
                     
         }
 

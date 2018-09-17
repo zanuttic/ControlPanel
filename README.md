@@ -4,6 +4,9 @@
 #Consola de Administracion de paquetes
 PM> install-package microsoft.EntityFrameworkCore.SqlServer -Version 2.0.3
 
+#Inicializa la db
+PM> Add-Migration ControlPanel 
+
 Documentacion sobre tipos de anotaciones SqlServer
 https://docs.microsoft.com/en-us/ef/core/modeling/
 
